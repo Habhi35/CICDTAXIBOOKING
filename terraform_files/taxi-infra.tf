@@ -169,7 +169,7 @@ resource "aws_ecr_repository" "app_repo" {
 resource "aws_instance" "ansible" {
   ami                    = "ami-0f8a61b66d1accaee"
   instance_type          = "c7i-flex.large"
-  key_name               = "taxi"
+  key_name               = "Taxi booking"
   subnet_id              = data.aws_subnet.az.id
   vpc_security_group_ids = [aws_security_group.demo-sg.id]
 
@@ -184,7 +184,7 @@ resource "aws_instance" "ansible" {
 resource "aws_instance" "jenkins_master" {
   ami                    = "ami-0f8a61b66d1accaee"
   instance_type          = "c7i-flex.large"
-  key_name               = "taxi"
+  key_name               = "Taxi booking"
   subnet_id              = data.aws_subnet.az.id
   vpc_security_group_ids = [aws_security_group.demo-sg.id]
 
@@ -199,7 +199,7 @@ resource "aws_instance" "jenkins_master" {
 resource "aws_instance" "jenkins_slave" {
   ami                    = "ami-0f8a61b66d1accaee"
   instance_type          = "c7i-flex.large"
-  key_name               = "taxi"
+  key_name               = "Taxi booking"
   subnet_id              = data.aws_subnet.az.id
   vpc_security_group_ids = [aws_security_group.demo-sg.id]
 
