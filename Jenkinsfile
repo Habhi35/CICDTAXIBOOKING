@@ -5,7 +5,7 @@ pipeline {
         }
     }
 environment {
-    PATH = "/opt/apache-maven-3.9.15/bin:$PATH"
+    PATH = "/opt/apache-maven-3.9.16/bin:$PATH"
     (SONAR_TOKEN = credentials('SONAR_TOKEN'))
     AWS_REGION = 'us-east-1'
     S3_BUCKET = 'my-war-bucket'
@@ -33,7 +33,7 @@ environment {
                 script {
                     // Run SonarQube analysis
                     sh """
-                    mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:3.9.16:sonar \
+                    mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar \
                     -Dsonar.projectKey=taxi-app35_taxi \
                     -Dsonar.organization=taxi-app35_taxi \
                     -Dsonar.host.url=https://sonarcloud.io \
