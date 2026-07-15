@@ -35,7 +35,7 @@ environment {
                     sh """
                     mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar \
                     -Dsonar.projectKey=taxi-app35_taxi \
-                    -Dsonar.organization=taxi-app35_taxi \
+                    -Dsonar.organization=taxi-app35 \
                     -Dsonar.host.url=https://sonarcloud.io \
                     -Dsonar.token=${SONAR_TOKEN}
                     """
